@@ -1,0 +1,8 @@
+version: '3'
+services:
+  node:
+    image: node:18.2
+    working_dir: /project
+    volumes:
+    - .:/project
+    tty: true

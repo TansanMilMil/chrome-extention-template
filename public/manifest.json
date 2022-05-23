@@ -1,0 +1,25 @@
+{
+    "name": "my-chrome-extention",
+    "description": "",
+    "version": "0.1",
+    "manifest_version": 3,
+    "icons": {
+        "128": "image/icon.png"
+    },    
+    "permissions": [ 
+    ],
+    "action": {
+      "default_icon": "image/icon.png",
+      "default_title": "my-chrome-extention",
+      "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "content_scripts": [{
+        "matches": [ "https://hogefuga.com/*" ],
+        "js": [ "js/main.js" ],
+        "css": [ "style/styles.css" ],
+        "run_at": "document_end"
+    }]
+}
